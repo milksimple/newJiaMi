@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>feeName</key>
+		<string>包接送</string>
+		<key>fee</key>
+		<integer>600</integer>
+		<key>copies</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>feeName</key>
+		<string>统一体检</string>
+		<key>fee</key>
+		<integer>15</integer>
+		<key>copies</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>feeName</key>
+		<string>代办暂住证</string>
+		<key>fee</key>
+		<integer>100</integer>
+		<key>copies</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>feeName</key>
+		<string>挂科险</string>
+		<key>fee</key>
+		<integer>600</integer>
+		<key>copies</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>feeName</key>
+		<string>长途(食宿费)</string>
+		<key>fee</key>
+		<integer>150</integer>
+		<key>copies</key>
+		<integer>0</integer>
+	</dict>
+</array>
+</plist>

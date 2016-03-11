@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>feeName</key>
+		<string>课时费</string>
+		<key>fee</key>
+		<integer>2650</integer>
+	</dict>
+	<dict>
+		<key>feeName</key>
+		<string>培训费</string>
+		<key>fee</key>
+		<integer>1000</integer>
+	</dict>
+	<dict>
+		<key>feeName</key>
+		<string>考试费</string>
+		<key>fee</key>
+		<integer>480</integer>
+	</dict>
+	<dict>
+		<key>feeName</key>
+		<string>保险费</string>
+		<key>fee</key>
+		<integer>100</integer>
+	</dict>
+	<dict>
+		<key>feeName</key>
+		<string>资料费</string>
+		<key>fee</key>
+		<integer>50</integer>
+	</dict>
+</array>
+</plist>

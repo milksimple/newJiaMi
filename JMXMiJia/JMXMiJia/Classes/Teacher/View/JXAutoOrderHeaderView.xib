@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="gzr-Iq-GSt" customClass="JXAutoOrderHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="基础费用" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIz-wW-vXP">
+                    <rect key="frame" x="138" y="0.0" width="44" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQZ-cd-it2">
+                    <rect key="frame" x="20" y="22" width="108" height="1"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="0.44581397804054052" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="8CO-BK-bRr"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOC-kZ-bij">
+                    <rect key="frame" x="192" y="21" width="108" height="1"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="0.44581397804054052" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="w4t-u9-fsb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="qOC-kZ-bij" firstAttribute="leading" secondItem="uIz-wW-vXP" secondAttribute="trailing" constant="10" id="8Nn-G6-ra0"/>
+                <constraint firstItem="uIz-wW-vXP" firstAttribute="top" secondItem="gzr-Iq-GSt" secondAttribute="top" id="BdK-R8-YbR"/>
+                <constraint firstItem="uIz-wW-vXP" firstAttribute="leading" secondItem="tQZ-cd-it2" secondAttribute="trailing" constant="10" id="D5F-jx-lwA"/>
+                <constraint firstItem="uIz-wW-vXP" firstAttribute="centerX" secondItem="gzr-Iq-GSt" secondAttribute="centerX" id="FQY-io-4Wu"/>
+                <constraint firstItem="qOC-kZ-bij" firstAttribute="centerY" secondItem="gzr-Iq-GSt" secondAttribute="centerY" id="I0b-PR-0hl"/>
+                <constraint firstAttribute="trailing" secondItem="qOC-kZ-bij" secondAttribute="trailing" constant="20" id="Ssb-BG-7Cw"/>
+                <constraint firstItem="tQZ-cd-it2" firstAttribute="leading" secondItem="gzr-Iq-GSt" secondAttribute="leading" constant="20" id="dEM-PE-JzC"/>
+                <constraint firstAttribute="bottom" secondItem="uIz-wW-vXP" secondAttribute="bottom" id="lOS-tS-YW8"/>
+                <constraint firstItem="tQZ-cd-it2" firstAttribute="centerY" secondItem="gzr-Iq-GSt" secondAttribute="centerY" id="puM-Ba-cHr"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headerTitleLabel" destination="uIz-wW-vXP" id="tl9-We-F9S"/>
+            </connections>
+            <point key="canvasLocation" x="366" y="272"/>
+        </view>
+    </objects>
+</document>

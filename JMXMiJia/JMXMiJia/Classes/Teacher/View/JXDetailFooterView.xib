@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Mgz-2O-nl7" customClass="JXDetailFooterView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eby-4E-VLx">
+                    <rect key="frame" x="48" y="10" width="224" height="40"/>
+                    <color key="backgroundColor" red="0.98039215686274506" green="0.58431372549019611" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="wxN-bB-8cc"/>
+                    </constraints>
+                    <state key="normal" title="立刻报名">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="wxN-bB-8cc"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="signup:" destination="Mgz-2O-nl7" eventType="touchUpInside" id="X6p-Os-Ij6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bw-aA-iCc">
+                    <rect key="frame" x="48" y="62" width="224" height="40"/>
+                    <color key="backgroundColor" red="0.98039215686274506" green="0.73333333333333328" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="拨打报名电话:18987460601">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="call:" destination="Mgz-2O-nl7" eventType="touchUpInside" id="vBn-vS-4vd"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="8Bw-aA-iCc" firstAttribute="leading" secondItem="eby-4E-VLx" secondAttribute="leading" id="0dm-Gc-vB3"/>
+                <constraint firstAttribute="bottom" secondItem="8Bw-aA-iCc" secondAttribute="bottom" constant="20" id="8MP-P4-2a2"/>
+                <constraint firstItem="eby-4E-VLx" firstAttribute="centerX" secondItem="Mgz-2O-nl7" secondAttribute="centerX" id="A4Z-mM-Urp"/>
+                <constraint firstAttribute="trailing" secondItem="eby-4E-VLx" secondAttribute="trailing" constant="20" id="A9P-OY-5fb"/>
+                <constraint firstItem="8Bw-aA-iCc" firstAttribute="top" secondItem="eby-4E-VLx" secondAttribute="bottom" constant="10" id="Ag1-wY-HBv"/>
+                <constraint firstItem="eby-4E-VLx" firstAttribute="leading" secondItem="Mgz-2O-nl7" secondAttribute="leading" constant="20" id="gW9-nj-8L6"/>
+                <constraint firstItem="8Bw-aA-iCc" firstAttribute="height" secondItem="eby-4E-VLx" secondAttribute="height" id="lOB-oB-fo5"/>
+                <constraint firstItem="eby-4E-VLx" firstAttribute="top" secondItem="Mgz-2O-nl7" secondAttribute="top" constant="10" id="qEk-zk-o58"/>
+                <constraint firstItem="8Bw-aA-iCc" firstAttribute="width" secondItem="eby-4E-VLx" secondAttribute="width" id="rIQ-az-O8O"/>
+                <constraint firstItem="eby-4E-VLx" firstAttribute="width" secondItem="Mgz-2O-nl7" secondAttribute="width" multiplier="0.7" id="ygL-k8-WXj"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="A9P-OY-5fb"/>
+                    <exclude reference="gW9-nj-8L6"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="phoneCallButton" destination="8Bw-aA-iCc" id="kj8-OD-dRy"/>
+            </connections>
+            <point key="canvasLocation" x="625" y="121"/>
+        </view>
+    </objects>
+</document>

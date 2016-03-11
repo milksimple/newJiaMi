@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="KGk-i7-Jjw" customClass="JXAutoOrderCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="代办暂住证" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBI-4d-CSi">
+                        <rect key="frame" x="18" y="8" width="80" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="7kH-ad-NIY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥150/天*2=¥300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vr-CW-z3I">
+                        <rect key="frame" x="108" y="8" width="120" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="7pw-aW-7nd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lx5-Wb-84C">
+                        <rect key="frame" x="238" y="8" width="41" height="27"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nBI-4d-CSi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="4HM-fd-epl"/>
+                    <constraint firstItem="7Vr-CW-z3I" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="C5v-lV-4et"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Lx5-Wb-84C" secondAttribute="trailing" id="IJc-KF-rWy"/>
+                    <constraint firstItem="7Vr-CW-z3I" firstAttribute="leading" secondItem="nBI-4d-CSi" secondAttribute="trailing" constant="10" id="MPO-M7-eQz"/>
+                    <constraint firstItem="7Vr-CW-z3I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="chP-Hd-Wqw"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="nBI-4d-CSi" secondAttribute="bottom" id="gRf-GM-o5c"/>
+                    <constraint firstItem="Lx5-Wb-84C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="pke-s8-Jc8"/>
+                    <constraint firstItem="nBI-4d-CSi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="rNs-Is-yUl"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Lx5-Wb-84C" secondAttribute="bottom" id="tie-O7-12C"/>
+                    <constraint firstItem="Lx5-Wb-84C" firstAttribute="leading" secondItem="7Vr-CW-z3I" secondAttribute="trailing" constant="10" id="wO1-gk-kM4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="moneyLabel" destination="Lx5-Wb-84C" id="Z0x-XS-h8Q"/>
+                <outlet property="titleLabel" destination="nBI-4d-CSi" id="lme-xc-8vH"/>
+                <outlet property="unitPriceLabel" destination="7Vr-CW-z3I" id="I36-jx-Eu2"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
