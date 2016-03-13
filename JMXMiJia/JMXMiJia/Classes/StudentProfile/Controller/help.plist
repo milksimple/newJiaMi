@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>groupName</key>
+		<string>关于红包</string>
+		<key>helpItems</key>
+		<array>
+			<dict>
+				<key>ask</key>
+				<string>什么是驾米红包?</string>
+				<key>response</key>
+				<string>m：驾米红包是”驾米学车”赠送给驾米学员或学</string>
+			</dict>
+			<dict>
+				<key>ask</key>
+				<string>如何获得驾米红包？</string>
+				<key>response</key>
+				<string>m:（1）学员通过“驾米学车”app报名成功后，平台赠送相应额度红包给驾米学员。 \n  （2）学员自主充值。</string>
+			</dict>
+			<dict>
+				<key>ask</key>
+				<string>驾米红包的用途?</string>
+				<key>response</key>
+				<string>m：学员用于奖励老师的优质教学。</string>
+			</dict>
+			<dict>
+				<key>ask</key>
+				<string>学员如何自主充值红包?</string>
+				<key>response</key>
+				<string>m：为了你的资金安全，目前驾米仅提供线下充值，充值请联系驾米客服。(驾米无任何网上充值途径,谨防受骗！）\n   客服热线:18987460601</string>
+			</dict>
+			<dict>
+				<key>ask</key>
+				<string>驾米红包能否提现？</string>
+				<key>response</key>
+				<string>m：驾米红包仅用于奖励老师，学员不能提现。</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>groupName</key>
+		<string>关于推荐</string>
+		<key>helpItems</key>
+		<array>
+			<dict>
+				<key>ask</key>
+				<string>推荐好友学车有什么好处？</string>
+				<key>response</key>
+				<string>m：成功推荐好友可获得“驾米学车”100元奖励。</string>
+			</dict>
+			<dict>
+				<key>ask</key>
+				<string>如何推荐好友？</string>
+				<key>response</key>
+				<string>m：好友注册报名时填写你的推荐码，好友报名成功后才可获得驾米奖励。</string>
+			</dict>
+			<dict>
+				<key>ask</key>
+				<string>如何获得推荐码？</string>
+				<key>response</key>
+				<string>m：注册成功后即可获得“驾米学车”推荐码。</string>
+			</dict>
+			<dict>
+				<key>ask</key>
+				<string>如何分享推荐码？</string>
+				<key>response</key>
+				<string>m：点击“推荐好友”可分享你的专属推荐码。</string>
+			</dict>
+			<dict>
+				<key>ask</key>
+				<string>如何领取推荐奖励？</string>
+				<key>response</key>
+				<string>m：“驾米学车”将推荐奖励汇发至你的银行卡或支付宝账户。（客服热线:18987460601）</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>groupName</key>
+		<string>关于每日点评</string>
+		<key>helpItems</key>
+		<array>
+			<dict>
+				<key>ask</key>
+				<string>为什么要每日点评？</string>
+				<key>response</key>
+				<string>m：（1）每日点评可增进老师与学员之间的亲密关系。\n   （2）可形成一套完善的教学及考勤记录，实时掌握学员学车进度。\n   （3）可获得星级积分，加快星级成长速度。\n   （4）可获得学员红包或学员转赠的驾米红包。</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

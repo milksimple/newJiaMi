@@ -138,6 +138,12 @@
 		04FF3DCE1C856DE500A085E1 /* JXToStudentComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FF3DCD1C856DE500A085E1 /* JXToStudentComment.m */; };
 		524813A41C4935120008828A /* JXHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 524813A31C4935120008828A /* JXHttpTool.m */; };
 		528EC5C81C8F01AD00064D8E /* JXPushInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 528EC5C71C8F01AD00064D8E /* JXPushInfo.m */; };
+		528EC5D71C93040100064D8E /* JXHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528EC5D61C93040100064D8E /* JXHelpViewController.m */; };
+		528EC5D91C93074300064D8E /* help.plist in Resources */ = {isa = PBXBuildFile; fileRef = 528EC5D81C93074300064D8E /* help.plist */; };
+		528EC5DC1C930AFA00064D8E /* JXHelpGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 528EC5DB1C930AFA00064D8E /* JXHelpGroup.m */; };
+		528EC5DF1C930B0500064D8E /* JXHelpItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 528EC5DE1C930B0500064D8E /* JXHelpItem.m */; };
+		528EC5E31C930D0B00064D8E /* JXHelpTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 528EC5E11C930D0B00064D8E /* JXHelpTableViewCell.m */; };
+		528EC5E41C930D0B00064D8E /* JXHelpTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528EC5E21C930D0B00064D8E /* JXHelpTableViewCell.xib */; };
 		529627321C85CE0C00C773AB /* JXReplyToTeacherController.m in Sources */ = {isa = PBXBuildFile; fileRef = 529627311C85CE0C00C773AB /* JXReplyToTeacherController.m */; };
 		5296273C1C85D94F00C773AB /* JXTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5296273B1C85D94F00C773AB /* JXTextView.m */; };
 		52A30C861C2FC57000A176A7 /* JXNavLetterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A30C851C2FC57000A176A7 /* JXNavLetterButton.m */; };
@@ -396,6 +402,16 @@
 		524813A31C4935120008828A /* JXHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXHttpTool.m; sourceTree = "<group>"; };
 		528EC5C61C8F01AD00064D8E /* JXPushInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXPushInfo.h; sourceTree = "<group>"; };
 		528EC5C71C8F01AD00064D8E /* JXPushInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXPushInfo.m; sourceTree = "<group>"; };
+		528EC5D51C93040100064D8E /* JXHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXHelpViewController.h; sourceTree = "<group>"; };
+		528EC5D61C93040100064D8E /* JXHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXHelpViewController.m; sourceTree = "<group>"; };
+		528EC5D81C93074300064D8E /* help.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = help.plist; path = JMXMiJia/Classes/StudentProfile/Controller/help.plist; sourceTree = SOURCE_ROOT; };
+		528EC5DA1C930AFA00064D8E /* JXHelpGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXHelpGroup.h; path = JMXMiJia/Classes/StudentProfile/Controller/JXHelpGroup.h; sourceTree = SOURCE_ROOT; };
+		528EC5DB1C930AFA00064D8E /* JXHelpGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXHelpGroup.m; path = JMXMiJia/Classes/StudentProfile/Controller/JXHelpGroup.m; sourceTree = SOURCE_ROOT; };
+		528EC5DD1C930B0500064D8E /* JXHelpItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXHelpItem.h; path = JMXMiJia/Classes/StudentProfile/Controller/JXHelpItem.h; sourceTree = SOURCE_ROOT; };
+		528EC5DE1C930B0500064D8E /* JXHelpItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXHelpItem.m; path = JMXMiJia/Classes/StudentProfile/Controller/JXHelpItem.m; sourceTree = SOURCE_ROOT; };
+		528EC5E01C930D0B00064D8E /* JXHelpTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXHelpTableViewCell.h; sourceTree = "<group>"; };
+		528EC5E11C930D0B00064D8E /* JXHelpTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXHelpTableViewCell.m; sourceTree = "<group>"; };
+		528EC5E21C930D0B00064D8E /* JXHelpTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JXHelpTableViewCell.xib; sourceTree = "<group>"; };
 		529627301C85CE0C00C773AB /* JXReplyToTeacherController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXReplyToTeacherController.h; sourceTree = "<group>"; };
 		529627311C85CE0C00C773AB /* JXReplyToTeacherController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXReplyToTeacherController.m; sourceTree = "<group>"; };
 		5296273A1C85D94F00C773AB /* JXTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXTextView.h; sourceTree = "<group>"; };
@@ -881,6 +897,8 @@
 				041D315A1C560AF7007C8E43 /* JXChangePwdController.xib */,
 				04F3A8181C8FCA00006B88F1 /* JXPayViewController.h */,
 				04F3A8191C8FCA00006B88F1 /* JXPayViewController.m */,
+				528EC5D51C93040100064D8E /* JXHelpViewController.h */,
+				528EC5D61C93040100064D8E /* JXHelpViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -888,6 +906,11 @@
 		04F0ABA11C2A34EE000EB562 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				528EC5D81C93074300064D8E /* help.plist */,
+				528EC5DA1C930AFA00064D8E /* JXHelpGroup.h */,
+				528EC5DB1C930AFA00064D8E /* JXHelpGroup.m */,
+				528EC5DD1C930B0500064D8E /* JXHelpItem.h */,
+				528EC5DE1C930B0500064D8E /* JXHelpItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -910,6 +933,9 @@
 				04F3A8951C92BD7C006B88F1 /* JXRecommendPopView.xib */,
 				04F3A8971C92C0BD006B88F1 /* JXPopBgView.h */,
 				04F3A8981C92C0BD006B88F1 /* JXPopBgView.m */,
+				528EC5E01C930D0B00064D8E /* JXHelpTableViewCell.h */,
+				528EC5E11C930D0B00064D8E /* JXHelpTableViewCell.m */,
+				528EC5E21C930D0B00064D8E /* JXHelpTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1304,10 +1330,12 @@
 				04A2BEE51C706A8D008CE488 /* feeGroup.plist in Resources */,
 				041D31481C51BF52007C8E43 /* JXAutoOrderCell.xib in Resources */,
 				0491DCB41C8D70AF0019C71C /* JXChooseNumberView.xib in Resources */,
+				528EC5D91C93074300064D8E /* help.plist in Resources */,
 				04F3A8961C92BD7C006B88F1 /* JXRecommendPopView.xib in Resources */,
 				041D30FB1C4CBF00007C8E43 /* JXProfileMoneyCell.xib in Resources */,
 				047F40EF1C841C4F00C77BEF /* JXStudentClassHeaderView.xib in Resources */,
 				040FEE7D1C7AF85800E0CE5A /* JXStudentScoreCell.xib in Resources */,
+				528EC5E41C930D0B00064D8E /* JXHelpTableViewCell.xib in Resources */,
 				04A2BEF01C70824D008CE488 /* JXHangBranchCell.xib in Resources */,
 				04F0ABE41C2CDACC000EB562 /* JXTeacherToolBar.xib in Resources */,
 				040FEE821C7B020B00E0CE5A /* JXStudentProgressHeader.xib in Resources */,
@@ -1410,6 +1438,7 @@
 				047F40ED1C841C3F00C77BEF /* JXStudentClassHeaderView.m in Sources */,
 				04F3A88C1C9271F4006B88F1 /* UIWindow+Extension.m in Sources */,
 				040FEE8A1C7D59CC00E0CE5A /* JXInfoHeaderView.m in Sources */,
+				528EC5DF1C930B0500064D8E /* JXHelpItem.m in Sources */,
 				04F0ABDF1C2BF36F000EB562 /* UIView+Extension.m in Sources */,
 				04F0ABC91C2A3EF4000EB562 /* JXTeacherProfileController.m in Sources */,
 				041D30D11C45E557007C8E43 /* JXIconTextField.m in Sources */,
@@ -1452,6 +1481,7 @@
 				04F3A8891C926F69006B88F1 /* JXNewFeatureViewController.m in Sources */,
 				04129CE71C59B0F80098C7AB /* JXFilterView.m in Sources */,
 				041D31381C4F8B0E007C8E43 /* JXRightImageButton.m in Sources */,
+				528EC5E31C930D0B00064D8E /* JXHelpTableViewCell.m in Sources */,
 				04F0ABCC1C2A3F0F000EB562 /* JXInfoController.m in Sources */,
 				04A2BF421C741C9C008CE488 /* JXFeeDetailController.m in Sources */,
 				524813A41C4935120008828A /* JXHttpTool.m in Sources */,
@@ -1460,8 +1490,10 @@
 				041D30DE1C47538A007C8E43 /* JXRegisterViewController.m in Sources */,
 				041D31561C5602F3007C8E43 /* JXChangeRealnameController.m in Sources */,
 				04F0AB5C1C2A2FCE000EB562 /* AppDelegate.m in Sources */,
+				528EC5DC1C930AFA00064D8E /* JXHelpGroup.m in Sources */,
 				04129CE41C58BE1F0098C7AB /* JXSearchParas.m in Sources */,
 				0491DCB21C8D70A10019C71C /* JXChooseNumberView.m in Sources */,
+				528EC5D71C93040100064D8E /* JXHelpViewController.m in Sources */,
 				04EFFA901C6201F20020EB98 /* JXOptionalFeeCell.m in Sources */,
 				04129CF91C5F1F060098C7AB /* JXChooseSchoolController.m in Sources */,
 				041D30C51C44F62F007C8E43 /* JXAccount.m in Sources */,

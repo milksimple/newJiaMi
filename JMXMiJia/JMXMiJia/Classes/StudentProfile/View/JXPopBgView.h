@@ -12,7 +12,7 @@
 
 + (instancetype)popBgViewWithContentView:(UIView *)contentView contentSize:(CGSize)size;
 
-- (void)showFromView:(UIView *)fromView;
+- (void)show;
 
 - (void)dismiss;
 @end

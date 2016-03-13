@@ -19,7 +19,7 @@
 
 + (instancetype)popBgViewWithContentView:(UIView *)contentView contentSize:(CGSize)size {
     JXPopBgView *popBgView = [[JXPopBgView alloc] init];
-    popBgView.backgroundColor = [UIColor colorWithRed:200.0/255 green:200.0/255 blue:200.0/255 alpha:0.6];
+    popBgView.backgroundColor = [UIColor colorWithRed:100.0/255 green:100.0/255 blue:100.0/255 alpha:0.6];
     popBgView.frame = CGRectMake(0, 0, JXScreenW, JXScreenH);
     contentView.jx_size = size;
     
@@ -28,6 +28,7 @@
     CGFloat contentX = (JXScreenW - contentW) * 0.5;
     CGFloat contentY = (JXScreenH - contentH) * 0.5;
     contentView.frame = CGRectMake(contentX, contentY, contentW, contentH);
+    contentView.layer.cornerRadius = size.width * 0.05;
     [popBgView addSubview:contentView];
     popBgView.contentView = contentView;
     return popBgView;
@@ -43,9 +44,10 @@
     self.contentView.frame = CGRectMake(contentX, contentY, contentW, contentH);
 }
 
-- (void)showFromView:(UIView *)fromView {
+- (void)show {
     self.frame = CGRectMake(0, 0, JXScreenW, JXScreenH);
-    [fromView addSubview:self];
+    UIWindow *topWindow = [UIApplication sharedApplication].windows.lastObject;
+    [topWindow addSubview:self];
 }
 
 - (void)dismiss {

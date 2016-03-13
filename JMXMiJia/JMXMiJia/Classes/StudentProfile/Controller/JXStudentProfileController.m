@@ -26,6 +26,7 @@
 #import "JXPopBgView.h"
 #import "JXPopView.h"
 #import "JXRecommendPopView.h"
+#import "JXHelpViewController.h"
 
 @interface JXStudentProfileController () <UITableViewDataSource, UITableViewDelegate, JXProfileHeaderViewDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, JXChangeRealnameControllerDelegate, VPImageCropperDelegate, UINavigationControllerDelegate, JXProfileMoneyCellDelegate>
 
@@ -80,7 +81,7 @@ static NSString * const ID = @"profileCell";
             break;
             
         case 2:
-            return 1;
+            return 2;
             break;
             
         default:
@@ -126,8 +127,14 @@ static NSString * const ID = @"profileCell";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.imageView.image = [UIImage imageNamed:@"profile_setting"];
-        cell.textLabel.text = @"注销";
+        if (indexPath.row == 0) {
+            cell.imageView.image = [UIImage imageNamed:@"profile_setting"];
+            cell.textLabel.text = @"帮助";
+        }
+        else if (indexPath.row == 1) {
+            cell.imageView.image = [UIImage imageNamed:@"profile_setting"];
+            cell.textLabel.text = @"注销";
+        }
         return cell;
     }
     
@@ -177,29 +184,37 @@ static NSString * const ID = @"profileCell";
             [self.navigationController pushViewController:changePwdVC animated:YES];
         }
     }
-    else if (indexPath.section == 2 && indexPath.row == 0) { // 注销
-        // 提示是否注销
-        if (iOS8) {
-            UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"确定注销?" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-            UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-            [alertVC addAction:cancleAction];
-            
-            UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                // 清空account登录状态
-                JXAccount *account = [JXAccountTool account];
-                account.hasLogin = NO;
-                [JXAccountTool saveAccount:account];
-                UIWindow *window = [UIApplication sharedApplication].keyWindow;
-                window.rootViewController = [[JXLoginViewController alloc] init];
-            }];
-            [alertVC addAction:confirmAction];
-            
-            [self presentViewController:alertVC animated:YES completion:nil];
+    else if (indexPath.section == 2) { // 帮助、注销
+        if (indexPath.row == 0) { // 帮助
+            JXHelpViewController *helpVC = [[JXHelpViewController alloc] init];
+            [self.navigationController pushViewController:helpVC animated:YES];
         }
-        else {
-            UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"确定注销?" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"确定", nil];
-            [actionSheet showFromTabBar:self.tabBarController.tabBar];
+        else { // 注销
+            // 提示是否注销
+            if (iOS8) {
+                UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"确定注销?" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+                UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+                [alertVC addAction:cancleAction];
+                
+                UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    // 清空account登录状态
+                    JXAccount *account = [JXAccountTool account];
+                    account.hasLogin = NO;
+                    [JXAccountTool saveAccount:account];
+                    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+                    window.rootViewController = [[JXLoginViewController alloc] init];
+                }];
+                [alertVC addAction:confirmAction];
+                
+                [self presentViewController:alertVC animated:YES completion:nil];
+            }
+            else {
+                UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"确定注销?" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"确定", nil];
+                [actionSheet showFromTabBar:self.tabBarController.tabBar];
+            }
         }
+        
+        
     }
 }
 
@@ -356,14 +371,14 @@ static NSString * const ID = @"profileCell";
     JXRecommendPopView *recommendPopView = [JXRecommendPopView recommendPopView];
     
     JXPopBgView *bgView = [JXPopBgView popBgViewWithContentView:recommendPopView contentSize:recommendPopView.jx_size];
-    [bgView showFromView:self.view];
+    [bgView show];
 }
 
 - (void)profileMoneyCellDidClickedRedBagButton {
     JXPopView *redBagView = [JXPopView popView];
     
     JXPopBgView *bgView = [JXPopBgView popBgViewWithContentView:redBagView contentSize:CGSizeMake(JXScreenW * 0.7, JXScreenH * 0.7)];
-    [bgView showFromView:self.view];
+    [bgView show];
 }
 
 @end
