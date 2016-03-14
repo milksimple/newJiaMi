@@ -67,4 +67,6 @@ typedef enum {
 @property (nonatomic, copy) NSString *schoolID;
 /** 证件照片地址 */
 @property (nonatomic, copy) NSString *credentials;
+/** 视频地址 */
+@property (nonatomic, strong) NSArray *videos;
 @end

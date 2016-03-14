@@ -54,15 +54,30 @@
     JXStudentProfileController *studentProfileVC = [[JXStudentProfileController alloc] init];
     [self addChildVC:studentProfileVC image:@"tabbar_profile_normal" selectedImage:@"tabbar_profile_selected" title:@"个人"];
     
-    
-    if ([self.locMgr respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-        [self.locMgr requestWhenInUseAuthorization];
-        
+    if (iOS8) {
+        if ([self.locMgr respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+            [self.locMgr requestWhenInUseAuthorization];
+            
+            if ([CLLocationManager locationServicesEnabled]) {
+                [self.locMgr startUpdatingLocation];
+            }
+            else {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"无法进行定位" message:@"请检查您的设备是否开启定位功能" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                [alert show];
+            }
+        }
+    }
+    else {
         if ([CLLocationManager locationServicesEnabled]) {
             [self.locMgr startUpdatingLocation];
         }
+        else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"无法进行定位" message:@"请检查您的设备是否开启定位功能" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alert show];
+        }
     }
     
+    [self setSelectedIndex:1];
 }
 
 - (void)addChildVC:(UIViewController *)childVC image:(NSString *)image selectedImage:(NSString *)selectedImage title:(NSString *)title {

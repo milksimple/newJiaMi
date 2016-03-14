@@ -99,7 +99,7 @@
         self.teacher.mobile = teacher.mobile;
         self.teacher.schoolID = teacher.schoolID;
         self.teacher.credentials = teacher.credentials;
-        
+        self.teacher.videos = teacher.videos;
         
         [self.tableView reloadData];
     }
@@ -189,6 +189,7 @@
     paras[@"uid"] = self.teacher.uid;
     [JXHttpTool post:[NSString stringWithFormat:@"%@/CoachInfo", JXServerName] params:paras success:^(id json) {
         [NSKeyedArchiver archiveRootObject:json toFile:JXTeacherDetailJsonPath];
+        JXLog(@"%@", json);
         // 处理数据
         [self dealData:json];
         

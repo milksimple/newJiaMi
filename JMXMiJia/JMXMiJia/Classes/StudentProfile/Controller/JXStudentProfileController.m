@@ -27,12 +27,14 @@
 #import "JXPopView.h"
 #import "JXRecommendPopView.h"
 #import "JXHelpViewController.h"
+#import "MBProgressHUD+MJ.h"
 
-@interface JXStudentProfileController () <UITableViewDataSource, UITableViewDelegate, JXProfileHeaderViewDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, JXChangeRealnameControllerDelegate, VPImageCropperDelegate, UINavigationControllerDelegate, JXProfileMoneyCellDelegate>
+@interface JXStudentProfileController () <UITableViewDataSource, UITableViewDelegate, JXProfileHeaderViewDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, JXChangeRealnameControllerDelegate, VPImageCropperDelegate, UINavigationControllerDelegate, JXProfileMoneyCellDelegate, JXRecommendPopViewDelegate>
 
 @property (nonatomic, weak) UITableView *tableView;
 /** 弹窗 */
-@property (nonatomic, weak) UIView *popView;
+@property (nonatomic, weak) JXPopBgView *popView;
+
 
 @end
 
@@ -128,7 +130,7 @@ static NSString * const ID = @"profileCell";
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         if (indexPath.row == 0) {
-            cell.imageView.image = [UIImage imageNamed:@"profile_setting"];
+            cell.imageView.image = [UIImage imageNamed:@"profile_help"];
             cell.textLabel.text = @"帮助";
         }
         else if (indexPath.row == 1) {
@@ -301,6 +303,11 @@ static NSString * const ID = @"profileCell";
         }
     }
     
+    else if ([actionSheet.title isEqualToString:@"保存图片"]) {
+        if (buttonIndex == 0) { // 保存
+            [self saveImage];
+        }
+    }
 }
 
 #pragma mark - JXProfileHeaderViewDelegate
@@ -369,16 +376,54 @@ static NSString * const ID = @"profileCell";
 #pragma mark - JXProfileMoneyCellDelegate
 - (void)profileMoneyCellDidClickedCommentButton {
     JXRecommendPopView *recommendPopView = [JXRecommendPopView recommendPopView];
-    
-    JXPopBgView *bgView = [JXPopBgView popBgViewWithContentView:recommendPopView contentSize:recommendPopView.jx_size];
+    recommendPopView.delegate = self;
+    JXPopBgView *bgView = [JXPopBgView popBgViewWithContentView:recommendPopView contentSize:CGSizeMake(JXScreenW * 0.8, JXScreenH * 0.7)];
+    self.popView = bgView;
     [bgView show];
 }
 
 - (void)profileMoneyCellDidClickedRedBagButton {
     JXPopView *redBagView = [JXPopView popView];
     
-    JXPopBgView *bgView = [JXPopBgView popBgViewWithContentView:redBagView contentSize:CGSizeMake(JXScreenW * 0.7, JXScreenH * 0.7)];
+    JXPopBgView *bgView = [JXPopBgView popBgViewWithContentView:redBagView contentSize:CGSizeMake(JXScreenW * 0.8, JXScreenH * 0.7)];
+    self.popView = bgView;
     [bgView show];
+}
+
+#pragma mark - JXRecommendPopViewDelegate
+- (void)recommendPopViewDidLongPressed {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"保存图片" delegate:(self) cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"保存", nil];
+    [actionSheet showInView:self.popView];
+}
+
+#pragma mark - 截图和保存图片
+- (void)saveImage {
+    UIImage *image = [self snapshot:self.popView.contentView];
+    UIImageWriteToSavedPhotosAlbum(image, self, @selector(imageSavedToPhotosAlbum:didFinishSavingWithError:contextInfo:), nil);
+}
+
+- (UIImage *)snapshot:(UIView *)view
+{
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, YES, 0);
+    [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:YES];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
+- (void)imageSavedToPhotosAlbum:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    UIWindow *topWindow = [UIApplication sharedApplication].windows.lastObject;
+    NSString *message = nil;
+    if (!error) {
+        message = @"成功保存到相册";
+        [MBProgressHUD showSuccess:message toView:topWindow];
+    }else
+    {
+        message = [error description];
+        [MBProgressHUD showError:message toView:topWindow];
+    }
 }
 
 @end

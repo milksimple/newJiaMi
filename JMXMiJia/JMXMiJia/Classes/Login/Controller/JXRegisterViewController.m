@@ -135,6 +135,7 @@
         paras[@"password"] = self.pwdConfirmField.text;
         paras[@"realName"] = self.realNameField.text;
         paras[@"rMobile"] = self.rMobileField.text;
+        paras[@"pushToken"] = account.pushToken;
         if ([self.sexField.text isEqualToString:@"男"]) {
             paras[@"sex"] = @1;
         }
@@ -142,7 +143,6 @@
             paras[@"sex"] = @0;
         }
         
-        paras[@"pushToken"] = [JXAccountTool account].pushToken;
         [JXHttpTool post:@"http://10.255.1.25/dschoolAndroid/TraineeReg" params:paras success:^(id json) {
             
             BOOL success = [json[@"success"] boolValue];

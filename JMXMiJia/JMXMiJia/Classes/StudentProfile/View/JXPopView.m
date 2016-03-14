@@ -14,4 +14,8 @@
     return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([JXPopView class]) owner:nil options:nil].lastObject;
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+}
+
 @end

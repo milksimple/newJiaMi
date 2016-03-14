@@ -10,6 +10,8 @@
 
 @interface JXPopBgView : UIView
 
+@property (nonatomic, weak) UIView *contentView;
+
 + (instancetype)popBgViewWithContentView:(UIView *)contentView contentSize:(CGSize)size;
 
 - (void)show;

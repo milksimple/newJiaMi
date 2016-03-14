@@ -337,9 +337,11 @@
     [self.tableView.mj_header beginRefreshing];
 }
 
-
-
 #pragma mark - UITableViewDelegate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self.view endEditing:YES];
+}
+
 /*
  * 上滚动工具栏隐藏，下滚动工具栏出现
  - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {

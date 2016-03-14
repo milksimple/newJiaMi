@@ -3,63 +3,73 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JXRecommendPopView">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="300"/>
+            <rect key="frame" x="0.0" y="0.0" width="270" height="390"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdm-zA-yIR">
-                    <rect key="frame" x="10" y="10" width="43" height="16"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <rect key="frame" x="10" y="10" width="50" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="驾米推荐号：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="092-sQ-kOs">
-                    <rect key="frame" x="10" y="36" width="78" height="16"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <rect key="frame" x="10" y="38" width="90" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18213829999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lME-up-9Uz">
-                    <rect key="frame" x="93" y="36" width="85" height="16"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <rect key="frame" x="105" y="38" width="97" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="古河哪哪" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBE-9Z-coE">
-                    <rect key="frame" x="58" y="10" width="52" height="16"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <rect key="frame" x="65" y="10" width="60" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JIAME驾米" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Lk-At-Jbc">
-                    <rect key="frame" x="10" y="67" width="83" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="10" y="71" width="87" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学车如此轻松;推荐好友学车获驾米奖励" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqS-Gy-Qie">
-                    <rect key="frame" x="10" y="98" width="220" height="15"/>
+                    <rect key="frame" x="10" y="103" width="250" height="15"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8r6-ws-pr6">
-                    <rect key="frame" x="45" y="123" width="150" height="150"/>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr_code" translatesAutoresizingMaskIntoConstraints="NO" id="8r6-ws-pr6">
+                    <rect key="frame" x="10" y="128" width="250" height="250"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="150" id="IAz-3W-cWR"/>
-                        <constraint firstAttribute="height" constant="150" id="W32-Gn-Pfr"/>
+                        <constraint firstAttribute="width" constant="200" id="IAz-3W-cWR"/>
+                        <constraint firstAttribute="height" constant="200" id="W32-Gn-Pfr"/>
+                        <constraint firstAttribute="width" secondItem="8r6-ws-pr6" secondAttribute="height" multiplier="1:1" id="hN1-uO-zE3"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="IAz-3W-cWR"/>
+                            <exclude reference="W32-Gn-Pfr"/>
+                        </mask>
+                    </variation>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="8r6-ws-pr6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="0sG-Ir-HzP"/>
+                <constraint firstAttribute="bottom" secondItem="8r6-ws-pr6" secondAttribute="bottom" constant="10" id="74u-bF-pkh"/>
                 <constraint firstItem="JBE-9Z-coE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="8rK-UE-bjf"/>
                 <constraint firstItem="1Lk-At-Jbc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="A9T-Nx-GxZ"/>
+                <constraint firstItem="8r6-ws-pr6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="GpU-Z9-zwN"/>
                 <constraint firstItem="yqS-Gy-Qie" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="JjU-Fn-TMk"/>
                 <constraint firstItem="hdm-zA-yIR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="L6c-Qa-i2l"/>
                 <constraint firstItem="lME-up-9Uz" firstAttribute="top" secondItem="JBE-9Z-coE" secondAttribute="bottom" constant="10" id="LLv-Nd-R8h"/>
@@ -72,10 +82,25 @@
                 <constraint firstAttribute="trailing" secondItem="yqS-Gy-Qie" secondAttribute="trailing" constant="10" id="vaO-8z-Kez"/>
                 <constraint firstItem="yqS-Gy-Qie" firstAttribute="top" secondItem="1Lk-At-Jbc" secondAttribute="bottom" constant="10" id="ycQ-zy-wC9"/>
                 <constraint firstItem="JBE-9Z-coE" firstAttribute="leading" secondItem="hdm-zA-yIR" secondAttribute="trailing" constant="5" id="yrQ-Tc-CkC"/>
+                <constraint firstAttribute="trailing" secondItem="8r6-ws-pr6" secondAttribute="trailing" constant="10" id="zUC-XC-Usn"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="331" y="356"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="0sG-Ir-HzP"/>
+                    <exclude reference="74u-bF-pkh"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="mobileLabel" destination="lME-up-9Uz" id="S5b-Z3-zXA"/>
+                <outlet property="qrCodeView" destination="8r6-ws-pr6" id="ekA-Kn-ztS"/>
+                <outlet property="userNameLabel" destination="JBE-9Z-coE" id="jl4-U0-AU1"/>
+            </connections>
+            <point key="canvasLocation" x="207" y="349"/>
         </view>
     </objects>
+    <resources>
+        <image name="qr_code" width="200" height="200"/>
+    </resources>
 </document>

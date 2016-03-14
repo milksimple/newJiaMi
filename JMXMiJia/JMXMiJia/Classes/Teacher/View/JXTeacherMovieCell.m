@@ -8,11 +8,15 @@
 
 #import "JXTeacherMovieCell.h"
 #import "UIView+JXExtension.h"
+#import "JXTeacher.h"
 
-@interface JXTeacherMovieCell()
+@interface JXTeacherMovieCell() <UIWebViewDelegate>
 
 @property (nonatomic, weak) UILabel *titleLabel;
 
+@property (nonatomic, weak) UIWebView *webView;
+
+@property (nonatomic, weak) UILabel *corverLabel;
 @end
 
 @implementation JXTeacherMovieCell
@@ -23,8 +27,11 @@ static CGFloat const titleHeight = 20;
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self setupTitleLabel];
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        [self setupMovieView];
+        [self setupWebview];
+        
+        [self setupCorverLabel];
     }
     return self;
 }
@@ -38,38 +45,36 @@ static CGFloat const titleHeight = 20;
     self.titleLabel = titleLabel;
 }
 
-- (void)setupMovieView {
-    // 1.获取视频的URL
-    NSURL *url = [NSURL URLWithString:@"http://v1.mukewang.com/19954d8f-e2c2-4c0a-b8c1-a4c826b5ca8b/L.mp4"];
-    
-    // 2.创建控制器
-    MPMoviePlayerController *playerController = [[MPMoviePlayerController alloc] initWithContentURL:url];
-    
-    // 4.将View添加到控制器上
-    [self.contentView addSubview:playerController.view];
-    
-    // 5.设置属性
-    playerController.controlStyle = MPMovieControlStyleDefault;
-    
-    playerController.scalingMode = MPMovieScalingModeAspectFit;
-    
-    playerController.shouldAutoplay = NO;
-    
-    self.playerController = playerController;
-    
-    [playerController prepareToPlay];
+- (void)setupWebview {
+    UIWebView *webView = [[UIWebView alloc] init];
+    [self.contentView addSubview:webView];
+    self.webView = webView;
+}
+
+- (void)setupCorverLabel {
+    UILabel *corverLabel = [[UILabel alloc] init];
+    corverLabel.textAlignment = NSTextAlignmentCenter;
+    corverLabel.backgroundColor = JXColor(200, 200, 200);
+    corverLabel.textColor = [UIColor darkGrayColor];
+    corverLabel.text = @"暂无视频信息";
+    [self.contentView addSubview:corverLabel];
+    self.corverLabel = corverLabel;
 }
 
 - (void)setTeacher:(JXTeacher *)teacher {
     _teacher = teacher;
     
-//    self.playerController.contentURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", JXServerName, teacher.]];
-}
-
-- (void)didMoveToWindow {
-    [super didMoveToWindow];
-    
-//    [self.playerController prepareToPlay];
+    if (teacher.videos.count > 0) {
+        self.corverLabel.hidden = YES;
+        
+        NSDictionary *videosDict = teacher.videos[0];
+        NSURL *videoURL = [NSURL URLWithString:videosDict[@"videoPath"]];
+        NSURLRequest *request = [NSURLRequest requestWithURL:videoURL];
+        [self.webView loadRequest:request];
+    }
+    else {
+        self.corverLabel.hidden = NO;
+    }
 }
 
 + (CGFloat)rowHeight {
@@ -90,6 +95,30 @@ static CGFloat const titleHeight = 20;
     CGFloat playerH = playerW * 9.0 / 16.0;
     CGFloat playerY = CGRectGetMaxY(self.titleLabel.frame) + margin*0.5;
     self.playerController.view.frame = CGRectMake(playerX, playerY, playerW, playerH);
+    self.webView.frame = CGRectMake(playerX, playerY, playerW, playerH);
+    
+    self.corverLabel.frame = self.webView.frame;
 }
 
+/*
+- (void)setupMovieView {
+    NSURL *videoURL = [NSURL URLWithString:@"http://player.youku.com/embed/XMTQ4MTU0NTM4MA"];
+    // 1.创建控制器
+    MPMoviePlayerController *playerController = [[MPMoviePlayerController alloc] initWithContentURL:videoURL];
+    
+    // 2.将View添加到控制器上
+    [self.contentView addSubview:playerController.view];
+    
+    // 3.设置属性
+    playerController.controlStyle = MPMovieControlStyleDefault;
+    
+    playerController.scalingMode = MPMovieScalingModeAspectFit;
+    
+    playerController.shouldAutoplay = NO;
+    
+    self.playerController = playerController;
+    
+    [playerController prepareToPlay];
+}
+*/
 @end

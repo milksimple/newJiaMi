@@ -36,6 +36,7 @@
     self.editedImage = nil;
     self.overlayView = nil;
     self.ratioView = nil;
+    
 }
 
 - (id)initWithImage:(UIImage *)originalImage cropFrame:(CGRect)cropFrame limitScaleRatio:(NSInteger)limitRatio {

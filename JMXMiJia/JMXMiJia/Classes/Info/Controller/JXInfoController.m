@@ -58,6 +58,8 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
     if ([UIApplication sharedApplication].applicationIconBadgeNumber != 0) {
         [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     }
@@ -191,8 +193,11 @@
     JXPushInfo *pushInfo = self.pushInfos[indexPath.row];
     msgCell.pushInfo = pushInfo;
     msgCell.corverButtonClickedAction = ^{
+        [self.tabBarController setSelectedIndex:2];
+        /*
         self.isExplands[indexPath.row] = @(![self.isExplands[indexPath.row] integerValue]);
         [self.tableView reloadData];
+        */
     };
     msgCell.expland = [self.isExplands[indexPath.row] boolValue];
     return msgCell;

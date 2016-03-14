@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol JXRecommendPopViewDelegate <NSObject>
+
+@optional
+- (void)recommendPopViewDidLongPressed;
+
+@end
+
 @interface JXRecommendPopView : UIView
 
 + (instancetype)recommendPopView;
+
+@property (nonatomic, weak) id<JXRecommendPopViewDelegate> delegate;
 
 @end

@@ -11,8 +11,6 @@
 
 @interface JXPopBgView()
 
-@property (nonatomic, weak) UIView *contentView;
-
 @end
 
 @implementation JXPopBgView
@@ -46,7 +44,7 @@
 
 - (void)show {
     self.frame = CGRectMake(0, 0, JXScreenW, JXScreenH);
-    UIWindow *topWindow = [UIApplication sharedApplication].windows.lastObject;
+    UIWindow *topWindow = [UIApplication sharedApplication].keyWindow;
     [topWindow addSubview:self];
 }
 

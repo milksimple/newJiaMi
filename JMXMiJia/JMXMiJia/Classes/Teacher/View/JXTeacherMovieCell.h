@@ -12,7 +12,6 @@
 
 @interface JXTeacherMovieCell : UITableViewCell
 
-
 @property (nonatomic, strong) MPMoviePlayerController *playerController;
 
 @property (nonatomic, strong) JXTeacher *teacher;
